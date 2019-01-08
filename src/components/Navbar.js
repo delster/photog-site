@@ -10,27 +10,27 @@ const Navbar = class extends React.Component {
    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
     // Check if there are any navbar burgers
    if ($navbarBurgers.length > 0) {
- 
+
      // Add a click event on each of them
      $navbarBurgers.forEach( el => {
        el.addEventListener('click', () => {
- 
+
          // Get the target from the "data-target" attribute
          const target = el.dataset.target;
          const $target = document.getElementById(target);
- 
+
          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
          el.classList.toggle('is-active');
          $target.classList.toggle('is-active');
- 
+
        });
      });
    }
  }
- 
+
  render() {
    return (
-  
+
   <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
     <div className="container">
       <div className="navbar-brand">
@@ -46,23 +46,21 @@ const Navbar = class extends React.Component {
       </div>
       <div id="navMenu" className="navbar-menu">
       <div className="navbar-start has-text-centered">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-        <Link className="navbar-item" to="/contact">
-          Contact
-        </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Form Examples
-        </Link>
+        <Link className="navbar-item" to="#">Headshots</Link>
+        <Link className="navbar-item" to="#">Modeling</Link>
+        <Link className="navbar-item" to="#">Commercial</Link>
+        <Link className="navbar-item" to="#">Event</Link>
+        <Link className="navbar-item" to="#">Blog</Link>
+        <Link className="navbar-item" to="#">Contact</Link>
+        <Link className="navbar-item" to="/about">About</Link>
+        <Link className="navbar-item" to="/products">Products</Link>
+        <Link className="navbar-item" to="/contact">Contact</Link>
+        <Link className="navbar-item" to="/contact/examples">Form Examples</Link>
       </div>
       <div className="navbar-end has-text-centered">
         <a
           className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+          href="https://github.com/delster/photog-site"
           target="_blank"
           rel="noopener noreferrer"
         >
