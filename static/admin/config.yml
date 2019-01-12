@@ -1,49 +1,41 @@
 backend:
   name: git-gateway
   branch: master
-
 media_folder: static/img
 public_folder: /img
-
 collections:
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
+    create: true
     delete: false
     files:
-      - file: "src/pages/about.md"
+      - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/about.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/commercial/index.md"
+        label: "Commercial"
+        name: "commercial"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "commercial-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/commercial.md"
-        label: "Commercial"
-        name: "commercial"
+      - file: "src/pages/events/index.md"
+        label: "Events"
+        name: "events"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "events-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/events.md"
-        label: "Events"
-        name: "events"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "headshots-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/headshots.md"
+      - file: "src/pages/headshots/index.md"
         label: "Headshots"
         name: "headshots"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "headshots-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"
